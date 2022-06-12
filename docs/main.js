@@ -7,7 +7,7 @@ const commentSourcePara = document.getElementById("comment-source");
 let asciiData = null;
 async function getAsciiCharacter(code) {
   if (!asciiData) {
-    asciiData = await fetch("/data.json").then(r => r.json());
+    asciiData = await fetch("data.json").then(r => r.json());
   }
   return asciiData[code];
 }
